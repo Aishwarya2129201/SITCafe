@@ -1,0 +1,76 @@
+{% extends 'base.html' %}
+{% comment %} 
+    {% block content %}
+<h1>About SIT</h1>
+{{x}}
+{{y}}
+{% if y < 0 %}
+Negative
+{% elif y > 0 %}
+Positive
+{% else %}
+Zero
+{% endif %}
+
+<ul>
+    {% for food in foods %}
+<li>{{food}}</li>
+{% endfor %}
+</ul>
+
+<table border="1" width="25%">
+    <tr>
+        <th>Name</th>
+        <th>Mark</th>
+        <th>Status</th>
+    </tr>
+    {% for name,marks in students.items %}
+    <tr>
+        <td>{{name}}</td>
+        <td>{{marks}}</td>
+        <td>{% if marks >= 50 %}
+            PASS
+            {% else %}
+            FAIL
+            {% endif %}
+        </td>        
+    </tr>
+    {% endfor %}
+</table>
+{% endblock content %}
+{% endcomment %}
+{% block content %}
+<div style="background-color: #123456;" class="p-5">
+    <div class="container p-5 text-light bg-primary rounded">
+        <p>SIT Bhubaneswar provides its students, staff and faculty with an amazing café experience in the college campus with its well maintained and well equipped Cafeteria.<br>
+            The cafeteria is not just a food joint but a place to relax, interact, rejuvenate and take a refuge from the daily hectic schedule!
+            The college consists of a major cafeteria which caters for refreshment and eatables to the students, hostellers, faculty and the operating staff respectively. 
+            The cafeteria is very spacious in order to accommodate large number of students and also have comfortable sitting arrangement. 
+            The whole ambience of the cafeteria is so soothing and delightful that it tempt you to come here again and again. 
+            The cafeteria has a separate hall attached with the Main Hall especially for the staff and faculty members.
+            The cafeteria has a number of food counters providing with a variety of food items to choose from.  
+            A well-organized online management system is followed in the cafeteria in which an OTP is sent to the registered mobile number of the students to prevent misuse of their college IDs by other individuals.
+            The prices of the food items are fixed by the college authorities and are easily affordable by the students. 
+            The quality of food items is regularly monitored by the Prof. Incharge Canteen and College Medical Resident Officer.
+            Proper cleanliness and hygiene is maintained both by the cooking & cleaning teams and Prof. Incharge Canteen, College Medical Resident Officer inspect and check all the cafeterias on a regular basis.  
+            Keeping in view the importance of a healthy diet, the cafeterias serve good quality nutritious food with a healthy touch. 
+            Green vegetable pasta, cucumber sandwiches, fresh fruit juice and salad are some healthy options. 
+            For those who crave for handsome dishes the college serves samosas, cold-coffee, masala dosas and much more. 
+            College cafeterias are good enough for students to avoid purchases from shops outside the college.
+        </p>
+        <p>
+            Complaints and Suggestions are Welcome: 
+            We at SIT believe that improvement is a continuous process. 
+            Complaints and suggestions if any are always welcome from the students for the improvement in services. 
+            For this the students can contact the Teacher Incharge Canteens directly.
+            SIT follows the mantra of “fun-learning” which is why it promotes studying along with great café experience.
+        </p>
+    </div>
+</div>
+
+
+
+{% endblock content %}
+
+
+
